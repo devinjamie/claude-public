@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devin Gruber | Photo & Video</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Devin Gruber</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="assets/logo.png" alt="Devin Gruber" class="logo-img">
+            </div>
+            <p class="hero-tagline">Photo & Video — Capturing spaces, telling stories.</p>
+            <a href="#about" class="hero-scroll">
+                <span>See my work</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <!-- Replace with your headshot: <img src="assets/headshot.jpg" alt="Devin Gruber"> -->
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80&fit=crop&crop=face" alt="Photographer portrait — replace with your headshot" class="about-photo">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">A little about me</h2>
+                    <p>I'm Devin — a photographer and videographer who genuinely loves being behind the camera. I recently spent several months traveling through Asia, documenting everything from busy street markets to quiet temples at sunrise. That experience taught me how to find the right angle in any environment and adapt quickly to new settings.</p>
+                    <p>I'm looking to bring that same eye and energy to real estate media. I don't have years of interior photography on my resume, but I'm a quick study, easy to work with, and I show up ready to learn. If you're open to collaborating with someone who's hungry to grow in this space, I'd love to chat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section class="section photos" id="photos">
+        <div class="container">
+            <h2 class="section-title">Photography</h2>
+            <p class="section-subtitle">A selection of recent work — travel, architecture, and natural light.</p>
+            <div class="photo-grid">
+                <!-- Replace src URLs with your own photos when ready -->
+                <div class="photo-item photo-tall">
+                    <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80&fit=crop" alt="Temple architecture, Asia" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=700&q=80&fit=crop" alt="Landscape travel" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?w=700&q=80&fit=crop" alt="Street market detail" loading="lazy">
+                </div>
+                <div class="photo-item photo-wide">
+                    <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=1200&q=80&fit=crop" alt="Panoramic sunrise" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=700&q=80&fit=crop" alt="Asian street scene" loading="lazy">
+                </div>
+                <div class="photo-item photo-tall">
+                    <img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?w=600&q=80&fit=crop" alt="Golden light architecture" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1504198266287-1659872e6590?w=700&q=80&fit=crop" alt="Rice terraces" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1567699960452-0d26aa5eedce?w=700&q=80&fit=crop" alt="Architecture detail" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="section video" id="video">
+        <div class="container">
+            <h2 class="section-title">Video Work</h2>
+            <p class="section-subtitle">Short-form travel content and cinematic clips from my time in Asia.</p>
+            <div class="video-grid">
+                <!-- Featured video: replace VIDEO_ID with your YouTube video ID -->
+                <div class="video-item video-featured">
+                    <div class="video-embed-placeholder">
+                        <div class="video-placeholder-inner">
+                            <svg width="56" height="56" viewBox="0 0 24 24" fill="currentColor" class="play-icon">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <p class="video-placeholder-label">Featured Reel</p>
+                            <p class="video-placeholder-sub">Paste your YouTube or Vimeo embed code here</p>
+                            <code class="video-embed-hint">&lt;iframe src="https://www.youtube.com/embed/VIDEO_ID" ...&gt;</code>
+                        </div>
+                    </div>
+                    <!-- UNCOMMENT & replace VIDEO_ID when ready:
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+                        title="Featured Reel" frameborder="0" allow="accelerometer; autoplay;
+                        clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    -->
+                </div>
+                <!-- Secondary video 2 -->
+                <div class="video-item">
+                    <div class="video-embed-placeholder video-embed-sm">
+                        <div class="video-placeholder-inner">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" class="play-icon">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <p class="video-placeholder-label">Clip 2</p>
+                        </div>
+                    </div>
+                    <!-- UNCOMMENT & replace VIDEO_ID when ready:
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_2"
+                        title="Clip 2" frameborder="0" allowfullscreen></iframe>
+                    -->
+                </div>
+                <!-- Secondary video 3 -->
+                <div class="video-item">
+                    <div class="video-embed-placeholder video-embed-sm">
+                        <div class="video-placeholder-inner">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" class="play-icon">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <p class="video-placeholder-label">Clip 3</p>
+                        </div>
+                    </div>
+                    <!-- UNCOMMENT & replace VIDEO_ID when ready:
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_3"
+                        title="Clip 3" frameborder="0" allowfullscreen></iframe>
+                    -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">What I Bring</h2>
+            <p class="section-subtitle">Tools, techniques, and traits I've picked up along the way.</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="2"/>
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M2 12h4M18 12h4M12 2v4M12 18v4"/>
+                        </svg>
+                    </div>
+                    <h3>Photography</h3>
+                    <p>Natural light, composition, architecture, landscapes, and detail shots. Comfortable shooting in any environment.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2"/>
+                        </svg>
+                    </div>
+                    <h3>Videography</h3>
+                    <p>Cinematic handheld and stabilized footage. Experience with run-and-gun shooting, b-roll, and storytelling through motion.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                    </div>
+                    <h3>Editing & Post</h3>
+                    <p>Adobe Lightroom, Premiere Pro, and DaVinci Resolve. Color grading, cropping, and clean delivery.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Adaptability</h3>
+                    <p>Months of travel photography taught me to work fast, improvise with limited gear, and deliver in unfamiliar settings.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Easy to Work With</h3>
+                    <p>I communicate clearly, take direction well, and bring positive energy to every shoot. No ego, just good work.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3>Quick Learner</h3>
+                    <p>Give me a brief and I'll deliver. I pick up new techniques fast and I'm genuinely excited to grow in real estate media.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="contact-text">If any of this resonates, I'd love to grab coffee or hop on a quick call. No pressure — just happy to chat about how I might be able to help.</p>
+                <div class="contact-links">
+                    <a href="mailto:your.email@example.com" class="contact-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 7l-10 6L2 7"/>
+                        </svg>
+                        <span>your.email@example.com</span>
+                    </a>
+                    <a href="tel:+1234567890" class="contact-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span>(123) 456-7890</span>
+                    </a>
+                    <a href="https://instagram.com/yourusername" target="_blank" class="contact-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="5"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+                        </svg>
+                        <span>@yourusername</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Devin Gruber. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
