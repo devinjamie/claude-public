@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Options — Devin Gruber</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafaf9;
+            padding: 40px 24px;
+            color: #1c1917;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #78716c;
+            margin-bottom: 48px;
+            font-size: 0.9rem;
+        }
+        .options {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+        .option {
+            border: 1px solid #e7e5e4;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .option-header {
+            padding: 16px 24px;
+            background: #f5f5f4;
+            border-bottom: 1px solid #e7e5e4;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .option-header h3 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #57534e;
+        }
+        .option-header span {
+            font-size: 0.75rem;
+            color: #a8a29e;
+        }
+        .option-preview {
+            padding: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+            background: white;
+        }
+        .option-preview.dark {
+            background: #1c1917;
+        }
+        .option-preview img, .option-preview svg {
+            max-width: 100%;
+            height: auto;
+            max-height: 120px;
+        }
+        .option-desc {
+            padding: 16px 24px;
+            border-top: 1px solid #e7e5e4;
+            font-size: 0.8rem;
+            color: #78716c;
+            line-height: 1.6;
+        }
+        .checkerboard {
+            background-image:
+                linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+                linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+                linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+        .both-bg {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .both-bg > div {
+            padding: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+        }
+        .both-bg > div:first-child {
+            background: white;
+            border-right: 1px solid #e7e5e4;
+        }
+        .both-bg > div:last-child {
+            background: #1c1917;
+        }
+        .original {
+            border: 2px solid #c2a472;
+        }
+    </style>
+</head>
+<body>
+    <h1>Logo Options</h1>
+    <p class="subtitle">5 streamlined alternatives — all SVG, all transparent background, all matching your site's warm/airy theme.</p>
+
+    <div class="options">
+        <!-- Original for reference -->
+        <div class="option original">
+            <div class="option-header">
+                <h3>CURRENT (for reference)</h3>
+                <span>Your existing graphic</span>
+            </div>
+            <div class="option-preview">
+                <img src="assets/logo.png" alt="Current logo" style="max-height: 100px;">
+            </div>
+            <div class="option-desc">Your current logo — script text with outline/glow, sparkles, and illustrated camera. Works, but the multiple elements compete for attention.</div>
+        </div>
+
+        <!-- Option 1 -->
+        <div class="option">
+            <div class="option-header">
+                <h3>OPTION 1 — Script + Aperture</h3>
+                <span>Keeps the script feel, but cleaner</span>
+            </div>
+            <div class="option-preview checkerboard">
+                <img src="assets/logo-option-1.svg" alt="Logo option 1">
+            </div>
+            <div class="option-desc">Keeps the italic/script energy of your original but removes the outline glow and sparkles. Camera replaced by a minimal aperture circle in gold. Subtle underline curve adds movement.</div>
+        </div>
+
+        <!-- Option 2 -->
+        <div class="option">
+            <div class="option-header">
+                <h3>OPTION 2 — Modern Sans-Serif</h3>
+                <span>Typographic, no icon</span>
+            </div>
+            <div class="option-preview checkerboard">
+                <img src="assets/logo-option-2.svg" alt="Logo option 2">
+            </div>
+            <div class="option-desc">Completely typographic. Lowercase, light/bold weight contrast. Gold accent bar. Very modern and clean — lets your work speak instead of the logo. Good for a professional pitch.</div>
+        </div>
+
+        <!-- Option 3 -->
+        <div class="option">
+            <div class="option-header">
+                <h3>OPTION 3 — Clean Script + Lens Dot</h3>
+                <span>Closest to your original but stripped back</span>
+            </div>
+            <div class="option-preview checkerboard">
+                <img src="assets/logo-option-3.svg" alt="Logo option 3">
+            </div>
+            <div class="option-desc">Script name like you have now, but no outline, no sparkles. A tiny lens-shaped dot acts as a visual period. Tagline in clean tracking beneath. Still has personality but much more cohesive.</div>
+        </div>
+
+        <!-- Option 4 -->
+        <div class="option">
+            <div class="option-header">
+                <h3>OPTION 4 — Stacked/Centered</h3>
+                <span>Vertical layout, elegant</span>
+            </div>
+            <div class="option-preview checkerboard">
+                <img src="assets/logo-option-4.svg" alt="Logo option 4">
+            </div>
+            <div class="option-desc">Centered vertical stack — name, gold divider line, role. Small aperture mark below. Works great as a hero element and as a favicon/watermark. Very clean hierarchy.</div>
+        </div>
+
+        <!-- Option 5 -->
+        <div class="option">
+            <div class="option-header">
+                <h3>OPTION 5 — Hybrid Split</h3>
+                <span>Script first name + sans last name</span>
+            </div>
+            <div class="option-preview checkerboard">
+                <img src="assets/logo-option-5.svg" alt="Logo option 5">
+            </div>
+            <div class="option-desc">Italic serif for "Devin" (personal, warm) paired with thin sans-serif for "Gruber" (professional, modern). A warm gold dot separates them. Subtle but distinctive.</div>
+        </div>
+    </div>
+</body>
+</html>
