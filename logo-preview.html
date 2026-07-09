@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logo Options — Devin Gruber</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <title>Logo Refinements — Option 2 Variations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -14,9 +14,8 @@
             color: #1c1917;
         }
         h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 400;
+            font-size: 1.5rem;
+            font-weight: 300;
             margin-bottom: 8px;
             text-align: center;
         }
@@ -24,22 +23,27 @@
             text-align: center;
             color: #78716c;
             margin-bottom: 48px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            line-height: 1.6;
         }
         .options {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 48px;
+            gap: 32px;
         }
         .option {
             border: 1px solid #e7e5e4;
-            border-radius: 16px;
+            border-radius: 12px;
             overflow: hidden;
+            transition: 0.2s ease;
+        }
+        .option:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
         }
         .option-header {
-            padding: 16px 24px;
+            padding: 14px 20px;
             background: #f5f5f4;
             border-bottom: 1px solid #e7e5e4;
             display: flex;
@@ -47,145 +51,157 @@
             justify-content: space-between;
         }
         .option-header h3 {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             color: #57534e;
+            letter-spacing: 0.5px;
         }
         .option-header span {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #a8a29e;
         }
-        .option-preview {
-            padding: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 180px;
-            background: white;
-        }
-        .option-preview.dark {
-            background: #1c1917;
-        }
-        .option-preview img, .option-preview svg {
-            max-width: 100%;
-            height: auto;
-            max-height: 120px;
-        }
-        .option-desc {
-            padding: 16px 24px;
-            border-top: 1px solid #e7e5e4;
-            font-size: 0.8rem;
-            color: #78716c;
-            line-height: 1.6;
-        }
-        .checkerboard {
-            background-image:
-                linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
-                linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
-                linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
-                linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
-            background-size: 20px 20px;
-            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-        }
-        .both-bg {
+        .previews {
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
-        .both-bg > div {
-            padding: 48px;
+        .preview-light, .preview-dark {
+            padding: 40px 32px;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 180px;
+            min-height: 140px;
         }
-        .both-bg > div:first-child {
-            background: white;
+        .preview-light {
+            background: #ffffff;
             border-right: 1px solid #e7e5e4;
         }
-        .both-bg > div:last-child {
+        .preview-dark {
             background: #1c1917;
         }
-        .original {
-            border: 2px solid #c2a472;
+        .preview-dark img {
+            filter: invert(1) brightness(2);
+            opacity: 0.9;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            max-height: 80px;
+        }
+        .option-desc {
+            padding: 12px 20px;
+            border-top: 1px solid #e7e5e4;
+            font-size: 0.75rem;
+            color: #78716c;
+            line-height: 1.6;
+        }
+        .note {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 20px 24px;
+            background: #f5f0e8;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            color: #57534e;
+            line-height: 1.7;
+        }
+        .note strong {
+            color: #1c1917;
         }
     </style>
 </head>
 <body>
-    <h1>Logo Options</h1>
-    <p class="subtitle">5 streamlined alternatives — all SVG, all transparent background, all matching your site's warm/airy theme.</p>
+    <h1>Option 2 — Refined</h1>
+    <p class="subtitle">5 variations of the modern typographic logo. All use Inter (your site font).<br>Shown on light and dark backgrounds.</p>
 
     <div class="options">
-        <!-- Original for reference -->
-        <div class="option original">
-            <div class="option-header">
-                <h3>CURRENT (for reference)</h3>
-                <span>Your existing graphic</span>
-            </div>
-            <div class="option-preview">
-                <img src="assets/logo.png" alt="Current logo" style="max-height: 100px;">
-            </div>
-            <div class="option-desc">Your current logo — script text with outline/glow, sparkles, and illustrated camera. Works, but the multiple elements compete for attention.</div>
-        </div>
-
-        <!-- Option 1 -->
+        <!-- V2A -->
         <div class="option">
             <div class="option-header">
-                <h3>OPTION 1 — Script + Aperture</h3>
-                <span>Keeps the script feel, but cleaner</span>
+                <h3>V2A — Original refined</h3>
+                <span>Gold bar under first name</span>
             </div>
-            <div class="option-preview checkerboard">
-                <img src="assets/logo-option-1.svg" alt="Logo option 1">
+            <div class="previews">
+                <div class="preview-light">
+                    <img src="assets/logo-v2a.svg" alt="V2A light">
+                </div>
+                <div class="preview-dark">
+                    <img src="assets/logo-v2a.svg" alt="V2A dark">
+                </div>
             </div>
-            <div class="option-desc">Keeps the italic/script energy of your original but removes the outline glow and sparkles. Camera replaced by a minimal aperture circle in gold. Subtle underline curve adds movement.</div>
+            <div class="option-desc">Lowercase, light/semibold weight contrast. Short gold bar sits left-aligned under the first name. Clean and understated.</div>
         </div>
 
-        <!-- Option 2 -->
+        <!-- V2B -->
         <div class="option">
             <div class="option-header">
-                <h3>OPTION 2 — Modern Sans-Serif</h3>
-                <span>Typographic, no icon</span>
+                <h3>V2B — All caps, wider tracking</h3>
+                <span>More formal/architectural</span>
             </div>
-            <div class="option-preview checkerboard">
-                <img src="assets/logo-option-2.svg" alt="Logo option 2">
+            <div class="previews">
+                <div class="preview-light">
+                    <img src="assets/logo-v2b.svg" alt="V2B light">
+                </div>
+                <div class="preview-dark">
+                    <img src="assets/logo-v2b.svg" alt="V2B dark">
+                </div>
             </div>
-            <div class="option-desc">Completely typographic. Lowercase, light/bold weight contrast. Gold accent bar. Very modern and clean — lets your work speak instead of the logo. Good for a professional pitch.</div>
+            <div class="option-desc">All caps with wide letter spacing. Feels more architectural/editorial. Gold bar between name and tagline. Would pair well with the real estate angle.</div>
         </div>
 
-        <!-- Option 3 -->
+        <!-- V2C -->
         <div class="option">
             <div class="option-header">
-                <h3>OPTION 3 — Clean Script + Lens Dot</h3>
-                <span>Closest to your original but stripped back</span>
+                <h3>V2C — Gold dot separator</h3>
+                <span>Dot instead of bar</span>
             </div>
-            <div class="option-preview checkerboard">
-                <img src="assets/logo-option-3.svg" alt="Logo option 3">
+            <div class="previews">
+                <div class="preview-light">
+                    <img src="assets/logo-v2c.svg" alt="V2C light">
+                </div>
+                <div class="preview-dark">
+                    <img src="assets/logo-v2c.svg" alt="V2C dark">
+                </div>
             </div>
-            <div class="option-desc">Script name like you have now, but no outline, no sparkles. A tiny lens-shaped dot acts as a visual period. Tagline in clean tracking beneath. Still has personality but much more cohesive.</div>
+            <div class="option-desc">Same weight contrast, but a gold dot separates first and last name. More subtle, slightly more playful. No bar needed — the dot does the work.</div>
         </div>
 
-        <!-- Option 4 -->
+        <!-- V2D -->
         <div class="option">
             <div class="option-header">
-                <h3>OPTION 4 — Stacked/Centered</h3>
-                <span>Vertical layout, elegant</span>
+                <h3>V2D — Bar as bullet</h3>
+                <span>Gold bar leads into tagline</span>
             </div>
-            <div class="option-preview checkerboard">
-                <img src="assets/logo-option-4.svg" alt="Logo option 4">
+            <div class="previews">
+                <div class="preview-light">
+                    <img src="assets/logo-v2d.svg" alt="V2D light">
+                </div>
+                <div class="preview-dark">
+                    <img src="assets/logo-v2d.svg" alt="V2D dark">
+                </div>
             </div>
-            <div class="option-desc">Centered vertical stack — name, gold divider line, role. Small aperture mark below. Works great as a hero element and as a favicon/watermark. Very clean hierarchy.</div>
+            <div class="option-desc">Gold bar sits before the tagline like a bullet point. Name has no decoration at all — relies purely on weight contrast. Minimal.</div>
         </div>
 
-        <!-- Option 5 -->
+        <!-- V2E -->
         <div class="option">
             <div class="option-header">
-                <h3>OPTION 5 — Hybrid Split</h3>
-                <span>Script first name + sans last name</span>
+                <h3>V2E — Full-width divider</h3>
+                <span>Name / line / tagline</span>
             </div>
-            <div class="option-preview checkerboard">
-                <img src="assets/logo-option-5.svg" alt="Logo option 5">
+            <div class="previews">
+                <div class="preview-light">
+                    <img src="assets/logo-v2e.svg" alt="V2E light">
+                </div>
+                <div class="preview-dark">
+                    <img src="assets/logo-v2e.svg" alt="V2E dark">
+                </div>
             </div>
-            <div class="option-desc">Italic serif for "Devin" (personal, warm) paired with thin sans-serif for "Gruber" (professional, modern). A warm gold dot separates them. Subtle but distinctive.</div>
+            <div class="option-desc">A subtle full-width gold line separates name from tagline. More structured, works great as a header or end card. Wide letter-spaced tagline underneath.</div>
         </div>
+    </div>
+
+    <div class="note">
+        <strong>Note:</strong> These use the Inter font from Google Fonts (same as your website). They'll render correctly on any modern browser. Once you pick one, I can also export it as a high-res PNG for your video end card, or adjust sizing/colors.
     </div>
 </body>
 </html>

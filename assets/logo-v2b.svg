@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" fill="none">
+  <!-- V2B: Same concept but all-caps name, thinner weight contrast,
+       accent bar centered between name and tagline -->
+  
+  <text x="14" y="44" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="300" fill="#1c1917" letter-spacing="4">DEVIN</text>
+  <text x="148" y="44" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="600" fill="#1c1917" letter-spacing="4">GRUBER</text>
+  
+  <!-- Gold accent bar - full width subtle -->
+  <rect x="14" y="56" width="56" height="2" rx="1" fill="#c2a472"/>
+  
+  <!-- Tagline -->
+  <text x="14" y="76" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#a8a29e" letter-spacing="4" font-weight="300">PHOTO &amp; VIDEO</text>
+</svg>
