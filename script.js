@@ -1,18 +1,31 @@
 /* ===========================
-   DEVIN GRUBER PORTFOLIO
-   Main JavaScript
+   DEVIN GRUBER PORTFOLIO V2
    =========================== */
 
-// ── Nav: scroll state ──────────────────────────────────────────
+// ── Nav: scroll state & hero visibility ──────────────────────
 const nav = document.getElementById('nav');
+const hero = document.querySelector('.hero');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-        nav.classList.add('scrolled');
-    } else {
+function updateNav() {
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
+    const scrollY = window.scrollY;
+
+    // Hero visible state (transparent nav)
+    if (scrollY < heroBottom - 80) {
+        nav.classList.add('hero-visible');
         nav.classList.remove('scrolled');
+    } else {
+        nav.classList.remove('hero-visible');
+        if (scrollY > 20) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
     }
-});
+}
+
+window.addEventListener('scroll', updateNav);
+window.addEventListener('load', updateNav);
 
 // ── Mobile nav toggle ─────────────────────────────────────────
 const toggle = document.querySelector('.nav-toggle');
@@ -45,7 +58,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             e.preventDefault();
-            const offset = 80; // nav height
+            const offset = 80;
             const top = target.getBoundingClientRect().top + window.scrollY - offset;
             window.scrollTo({ top, behavior: 'smooth' });
         }
@@ -53,11 +66,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ── Fade-in on scroll ─────────────────────────────────────────
-const fadeElements = document.querySelectorAll('.section-title, .section-subtitle, .about-image, .about-text, .photo-item, .video-item, .skill-card, .contact-content');
+const fadeElements = document.querySelectorAll(
+    '.section-title, .section-subtitle, .about-image, .about-text, ' +
+    '.photo-item, .video-clip, .skill-card, .contact-content, .iphone-frame-wrap'
+);
 
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -60px 0px'
+    rootMargin: '0px 0px -40px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -71,12 +87,12 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeElements.forEach((el, index) => {
     el.classList.add('fade-in');
-    // Stagger delay for grid items
-    const parent = el.closest('.photo-grid, .skills-grid, .video-grid');
+    // Stagger for grid items
+    const parent = el.closest('.photo-grid, .skills-grid, .video-clips-grid');
     if (parent) {
         const siblings = Array.from(parent.children);
         const i = siblings.indexOf(el);
-        el.style.transitionDelay = `${i * 0.07}s`;
+        el.style.transitionDelay = `${i * 0.05}s`;
     }
     observer.observe(el);
 });
@@ -101,14 +117,3 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-
-// ── Photo grid: lightbox on click ───────────────────────────
-// (Placeholder note: uncomment and wire up real images when added)
-/*
-const photoItems = document.querySelectorAll('.photo-item');
-photoItems.forEach(item => {
-    item.addEventListener('click', () => {
-        // Lightbox logic goes here
-    });
-});
-*/

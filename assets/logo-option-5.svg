@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 100" fill="none">
+  <!-- Option 5: Hybrid — keeps some script energy from your original
+       but much cleaner. Script first name, sans-serif last name.
+       No camera icon, just a subtle warm dot. -->
+  
+  <!-- First name - italic serif (script feel) -->
+  <text x="16" y="60" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-style="italic" font-weight="400" fill="#1c1917" letter-spacing="-1">Devin</text>
+  
+  <!-- Last name - clean sans-serif -->
+  <text x="166" y="60" font-family="'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="200" fill="#1c1917" letter-spacing="0">Gruber</text>
+  
+  <!-- Warm dot separator -->
+  <circle cx="155" cy="52" r="3" fill="#c2a472"/>
+  
+  <!-- Tagline -->
+  <text x="18" y="86" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#a8a29e" letter-spacing="3.5" font-weight="300">VISUAL STORYTELLING</text>
+</svg>

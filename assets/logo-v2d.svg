@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" fill="none">
+  <!-- V2D: Lowercase, no separator, weight contrast only,
+       tagline with a small gold bar BEFORE the text (like a bullet) -->
+  
+  <text x="14" y="46" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="200" fill="#1c1917" letter-spacing="-0.5">devin</text>
+  <text x="130" y="46" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="700" fill="#1c1917" letter-spacing="-0.5">gruber</text>
+  
+  <!-- Small gold bar before tagline -->
+  <rect x="14" y="70" width="16" height="2" rx="1" fill="#c2a472"/>
+  <text x="38" y="74" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#78716c" letter-spacing="2.5" font-weight="400">PHOTO &amp; VIDEO</text>
+</svg>

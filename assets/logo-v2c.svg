@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 90" fill="none">
+  <!-- V2C: Lowercase, gold dot separator instead of bar,
+       tagline right-aligned to the name's baseline -->
+  
+  <text x="14" y="48" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="300" fill="#1c1917" letter-spacing="0.5">devin</text>
+  
+  <!-- Gold dot separator -->
+  <circle cx="133" cy="44" r="3.5" fill="#c2a472"/>
+  
+  <text x="146" y="48" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="600" fill="#1c1917" letter-spacing="0.5">gruber</text>
+  
+  <!-- Tagline tucked under -->
+  <text x="14" y="74" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#a8a29e" letter-spacing="3.5" font-weight="300">PHOTO &amp; VIDEO</text>
+</svg>
