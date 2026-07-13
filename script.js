@@ -1,5 +1,5 @@
 /* ===========================
-   DEVIN GRUBER PORTFOLIO V2
+   DEVIN GRUBER PORTFOLIO V3
    =========================== */
 
 // ── Nav: scroll state & hero visibility ──────────────────────
@@ -10,7 +10,6 @@ function updateNav() {
     const heroBottom = hero.offsetTop + hero.offsetHeight;
     const scrollY = window.scrollY;
 
-    // Hero visible state (transparent nav)
     if (scrollY < heroBottom - 80) {
         nav.classList.add('hero-visible');
         nav.classList.remove('scrolled');
@@ -36,7 +35,6 @@ toggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-// Close menu when a link is clicked
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         toggle.classList.remove('active');
@@ -44,7 +42,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Close menu when clicking outside
 document.addEventListener('click', (e) => {
     if (!toggle.contains(e.target) && !navLinks.contains(e.target)) {
         toggle.classList.remove('active');
@@ -87,7 +84,6 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeElements.forEach((el, index) => {
     el.classList.add('fade-in');
-    // Stagger for grid items
     const parent = el.closest('.photo-grid, .skills-grid, .video-clips-grid');
     if (parent) {
         const siblings = Array.from(parent.children);

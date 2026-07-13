@@ -1,5 +1,5 @@
 /* ===========================
-   DEVIN GRUBER PORTFOLIO V2
+   DEVIN GRUBER PORTFOLIO V3
    Light & Airy — Clean Sans-Serif
    =========================== */
 
@@ -25,6 +25,7 @@
     --shadow-xl: 0 20px 60px rgba(0,0,0,0.12);
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 /* Reset */
 *, *::before, *::after {
@@ -56,12 +57,12 @@ a {
     text-decoration: none;
 }
 
-/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
+
 
 /* ===========================
    NAVIGATION
@@ -84,7 +85,6 @@ a {
     box-shadow: var(--shadow-sm);
 }
 
-/* Nav on hero - transparent with white text */
 .nav.hero-visible {
     background: transparent;
     backdrop-filter: none;
@@ -94,11 +94,13 @@ a {
 .nav.hero-visible .nav-logo,
 .nav.hero-visible .nav-links a {
     color: white;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.4);
 }
 
 .nav.hero-visible .nav-cta {
-    background: rgba(255,255,255,0.2);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.4);
+    text-shadow: none;
 }
 
 .nav.hero-visible .nav-toggle span {
@@ -116,7 +118,7 @@ a {
 }
 
 .nav-logo {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: -0.02em;
 }
@@ -124,12 +126,12 @@ a {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 36px;
     list-style: none;
 }
 
 .nav-links a {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 400;
     color: var(--color-text-muted);
     transition: var(--transition);
@@ -171,8 +173,10 @@ a {
     transition: var(--transition);
 }
 
+
 /* ===========================
    HERO — Video Loop Background
+   Bigger logo + tagline, better legibility
    =========================== */
 .hero {
     position: relative;
@@ -201,40 +205,46 @@ a {
     inset: 0;
     background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.15) 40%,
-        rgba(0, 0, 0, 0.4) 100%
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.2) 40%,
+        rgba(0, 0, 0, 0.5) 100%
     );
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
-    padding: 120px 24px 80px;
+    padding: 80px 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 800px;
 }
 
 .hero-logo-img {
-    max-width: 320px;
+    width: 100%;
+    max-width: 520px;
     height: auto;
-    /* If using a dark logo, add a white filter or use a white version */
     filter: brightness(0) invert(1);
+    drop-shadow: 0 2px 20px rgba(0,0,0,0.5);
 }
 
 .hero-tagline {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
     font-weight: 300;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    margin-top: 8px;
 }
 
 .hero-scroll {
-    margin-top: 40px;
-    color: rgba(255, 255, 255, 0.7);
+    margin-top: 48px;
+    color: rgba(255, 255, 255, 0.8);
     transition: var(--transition);
 }
 
@@ -250,6 +260,7 @@ a {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(6px); }
 }
+
 
 /* ===========================
    SECTIONS
@@ -271,7 +282,7 @@ a {
     font-size: 1rem;
     font-weight: 300;
     margin-bottom: 48px;
-    max-width: 550px;
+    max-width: 600px;
 }
 
 /* ===========================
@@ -311,8 +322,9 @@ a {
     margin-bottom: 0;
 }
 
+
 /* ===========================
-   PHOTOS — Masonry-style Grid
+   PHOTOS — Masonry Grid (23 photos)
    =========================== */
 .photo-grid {
     columns: 3;
@@ -339,46 +351,47 @@ a {
 }
 
 /* ===========================
-   VIDEO — iPhone Frame + Clips Grid
+   VIDEO — Large iPhone Frame + Clips Grid
    =========================== */
 .video {
     background: var(--color-surface);
 }
 
-/* iPhone Frame */
+/* iPhone Frame — Large, centered */
 .iphone-frame-wrap {
     display: flex;
     justify-content: center;
-    margin-bottom: 64px;
+    margin-bottom: 72px;
 }
 
 .iphone-frame {
     position: relative;
-    width: 300px;
+    width: 380px;
     background: #0a0a0a;
-    border-radius: 44px;
-    padding: 12px;
+    border-radius: 54px;
+    padding: 14px;
     box-shadow: 
         0 0 0 2px #1a1a1a,
-        0 0 0 4px #2a2a2a,
-        var(--shadow-xl);
+        0 0 0 5px #2a2a2a,
+        var(--shadow-xl),
+        0 40px 80px rgba(0,0,0,0.15);
 }
 
 .iphone-notch {
     position: absolute;
-    top: 12px;
+    top: 14px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90px;
-    height: 24px;
+    width: 100px;
+    height: 28px;
     background: #0a0a0a;
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 18px 18px;
     z-index: 2;
 }
 
 .iphone-screen {
     position: relative;
-    border-radius: 34px;
+    border-radius: 42px;
     overflow: hidden;
     background: #000;
     aspect-ratio: 9/19.5;
@@ -388,14 +401,15 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 34px;
+    border-radius: 42px;
 }
 
-/* Video Clips Grid */
+
+/* Video Clips Grid — 8 vertical + 2 horizontal */
 .video-clips-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 14px;
     margin-top: 48px;
 }
 
@@ -470,6 +484,7 @@ a {
     line-height: 1.7;
 }
 
+
 /* ===========================
    CONTACT
    =========================== */
@@ -528,6 +543,7 @@ a {
     border-top: 1px solid var(--color-border);
 }
 
+
 /* ===========================
    RESPONSIVE
    =========================== */
@@ -541,11 +557,31 @@ a {
     }
 
     .video-clips-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .video-clip.horizontal {
-        grid-column: span 3;
+        grid-column: span 2;
+    }
+
+    .iphone-frame {
+        width: 340px;
+        border-radius: 48px;
+        padding: 12px;
+    }
+
+    .iphone-screen {
+        border-radius: 38px;
+    }
+
+    .montage-video {
+        border-radius: 38px;
+    }
+
+    .iphone-notch {
+        width: 90px;
+        height: 24px;
+        top: 12px;
     }
 }
 
@@ -574,6 +610,7 @@ a {
 
     .nav.hero-visible .nav-links a {
         color: var(--color-text-muted);
+        text-shadow: none;
     }
 
     .nav-toggle {
@@ -590,6 +627,18 @@ a {
 
     .nav-toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .hero-content {
+        padding: 60px 24px;
+    }
+
+    .hero-logo-img {
+        max-width: 360px;
+    }
+
+    .hero-tagline {
+        font-size: 1.2rem;
     }
 
     .section {
@@ -620,23 +669,23 @@ a {
     }
 
     .iphone-frame {
-        width: 260px;
-        border-radius: 38px;
-        padding: 10px;
+        width: 300px;
+        border-radius: 44px;
+        padding: 11px;
     }
 
     .iphone-screen {
-        border-radius: 30px;
+        border-radius: 35px;
     }
 
     .montage-video {
-        border-radius: 30px;
+        border-radius: 35px;
     }
 
     .iphone-notch {
-        width: 76px;
-        height: 20px;
-        top: 10px;
+        width: 80px;
+        height: 22px;
+        top: 11px;
     }
 
     .video-clips-grid {
@@ -661,15 +710,36 @@ a {
 
 @media (max-width: 480px) {
     .hero-logo-img {
-        max-width: 220px;
+        max-width: 280px;
     }
 
     .hero-tagline {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        letter-spacing: 0.2em;
     }
 
     .photo-grid {
-        columns: 1;
+        columns: 2;
+    }
+
+    .iphone-frame {
+        width: 260px;
+        border-radius: 40px;
+        padding: 10px;
+    }
+
+    .iphone-screen {
+        border-radius: 32px;
+    }
+
+    .montage-video {
+        border-radius: 32px;
+    }
+
+    .iphone-notch {
+        width: 72px;
+        height: 20px;
+        top: 10px;
     }
 
     .video-clips-grid {
@@ -678,10 +748,6 @@ a {
 
     .video-clip.horizontal {
         grid-column: span 2;
-    }
-
-    .iphone-frame {
-        width: 240px;
     }
 }
 
