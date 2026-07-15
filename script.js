@@ -155,3 +155,15 @@ window.addEventListener('scroll', () => {
         }
     });
 })();
+
+
+// ── Smooth photo loading (prevent jitter) ─────────────────────
+document.querySelectorAll('.photo-item img').forEach(img => {
+    if (img.complete) {
+        img.classList.add('loaded');
+    } else {
+        img.addEventListener('load', () => {
+            img.classList.add('loaded');
+        });
+    }
+});
