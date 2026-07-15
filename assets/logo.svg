@@ -1,20 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" fill="none">
-  <!-- Centered typographic logo: devin gruber
-       Font: Inter (light 200 + semibold 600)
-       Colors: #1c1917 (text), #c2a472 (gold accent bar)
-       Matches the site color scheme exactly -->
-  
-  <!-- "devin" — light weight -->
-  <text x="200" y="45" 
-        font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" 
-        font-size="38" 
-        font-weight="200" 
-        fill="#1c1917" 
-        text-anchor="middle" 
-        letter-spacing="0.5">
-    <tspan font-weight="200">devin </tspan><tspan font-weight="600">gruber</tspan>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80">
+  <style>
+    .name-light { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 36px; fill: #1c1917; }
+    .name-bold { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 36px; fill: #1c1917; }
+  </style>
+  <text x="200" y="45" text-anchor="middle">
+    <tspan class="name-light">devin </tspan><tspan class="name-bold">gruber</tspan>
   </text>
-  
-  <!-- Gold accent bar — centered -->
-  <rect x="176" y="56" width="48" height="2.5" rx="1.25" fill="#c2a472"/>
+  <rect x="170" y="58" width="60" height="4" rx="2" fill="#B5CB41"/>
 </svg>

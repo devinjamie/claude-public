@@ -1,5 +1,5 @@
 /* ===========================
-   DEVIN GRUBER PORTFOLIO V4
+   DEVIN GRUBER PORTFOLIO V5
    =========================== */
 
 // ── Nav: scroll state & hero visibility ──────────────────────
@@ -7,7 +7,15 @@ const nav = document.getElementById('nav');
 const hero = document.querySelector('.hero');
 
 function updateNav() {
-    if (!hero) return; // gallery pages don't have hero
+    if (!hero) {
+        // Gallery pages don't have hero — keep scrolled state
+        if (window.scrollY > 20) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+        return;
+    }
     const heroBottom = hero.offsetTop + hero.offsetHeight;
     const scrollY = window.scrollY;
 
@@ -24,10 +32,8 @@ function updateNav() {
     }
 }
 
-if (hero) {
-    window.addEventListener('scroll', updateNav);
-    window.addEventListener('load', updateNav);
-}
+window.addEventListener('scroll', updateNav);
+window.addEventListener('load', updateNav);
 
 // ── Mobile nav toggle ─────────────────────────────────────────
 const toggle = document.querySelector('.nav-toggle');
@@ -116,3 +122,36 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// ── Photo Lightbox ────────────────────────────────────────────
+(function() {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+
+    const lightboxImg = lightbox.querySelector('img');
+
+    // Open lightbox when any .photo-item img is clicked
+    document.querySelectorAll('.photo-item img').forEach(img => {
+        img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close lightbox on overlay click
+    lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Close lightbox on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+})();
