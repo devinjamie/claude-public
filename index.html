@@ -29,10 +29,9 @@
         </div>
     </nav>
 
-    <!-- Hero Section — Looping Video Background -->
+    <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-video-wrap">
-            <!-- Replace src with your looping video file -->
             <video class="hero-video" autoplay muted loop playsinline>
                 <source src="assets/hero-loop.mp4" type="video/mp4">
             </video>
@@ -42,7 +41,7 @@
             <img src="assets/logo.svg" alt="Devin Gruber" class="hero-logo-img">
             <p class="hero-tagline">Photo & Video</p>
             <a href="#about" class="hero-scroll">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M12 5v14M19 12l-7 7-7-7"/>
                 </svg>
             </a>
@@ -54,7 +53,6 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <!-- Replace with your headshot -->
                     <img src="assets/headshot.jpg" alt="Devin Gruber" class="about-photo">
                 </div>
                 <div class="about-text">
@@ -67,49 +65,36 @@
         </div>
     </section>
 
-    <!-- Photos Section -->
+    <!-- Photos Section (Preview) -->
     <section class="section photos" id="photos">
         <div class="container">
             <h2 class="section-title">Photography</h2>
             <p class="section-subtitle">A broad sampling of recent work.</p>
-            <div class="photo-grid">
-                <!-- Replace src with your 20 photos: assets/photos/01.jpg through 20.jpg -->
+            <div class="photo-preview-grid">
                 <div class="photo-item"><img src="assets/photos/01.jpg" alt="Photo 1" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/02.jpg" alt="Photo 2" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/03.jpg" alt="Photo 3" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/04.jpg" alt="Photo 4" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/05.jpg" alt="Photo 5" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/06.jpg" alt="Photo 6" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/07.jpg" alt="Photo 7" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/08.jpg" alt="Photo 8" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/09.jpg" alt="Photo 9" loading="lazy"></div>
                 <div class="photo-item"><img src="assets/photos/10.jpg" alt="Photo 10" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/11.jpg" alt="Photo 11" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/12.jpg" alt="Photo 12" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/13.jpg" alt="Photo 13" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/14.jpg" alt="Photo 14" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/15.jpg" alt="Photo 15" loading="lazy"></div>
+                <div class="photo-item"><img src="assets/photos/03.jpg" alt="Photo 3" loading="lazy"></div>
                 <div class="photo-item"><img src="assets/photos/16.jpg" alt="Photo 16" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/17.jpg" alt="Photo 17" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/18.jpg" alt="Photo 18" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/19.jpg" alt="Photo 19" loading="lazy"></div>
-                <div class="photo-item"><img src="assets/photos/20.jpg" alt="Photo 20" loading="lazy"></div>
+                <div class="photo-item"><img src="assets/photos/06.jpg" alt="Photo 6" loading="lazy"></div>
+                <div class="photo-item"><img src="assets/photos/02.jpg" alt="Photo 2" loading="lazy"></div>
+            </div>
+            <div class="gallery-cta">
+                <a href="photos.html" class="btn-gallery">View Full Gallery</a>
             </div>
         </div>
     </section>
 
-    <!-- Video Section -->
+    <!-- Video Section (Preview) -->
     <section class="section video" id="video">
         <div class="container">
             <h2 class="section-title">Videography</h2>
             <p class="section-subtitle">A quick montage of recent work, followed by a few standalone clips in both vertical and horizontal. All shot on iPhone.</p>
 
-            <!-- Featured Montage in iPhone Frame -->
+            <!-- Montage in iPhone Frame -->
             <div class="iphone-frame-wrap">
                 <div class="iphone-frame">
                     <div class="iphone-notch"></div>
                     <div class="iphone-screen">
-                        <!-- Replace src with your montage video -->
                         <video class="montage-video" controls playsinline>
                             <source src="assets/videos/montage.mp4" type="video/mp4">
                         </video>
@@ -117,9 +102,8 @@
                 </div>
             </div>
 
-            <!-- Additional Video Clips -->
-            <div class="video-clips-grid">
-                <!-- 6 Vertical clips -->
+            <!-- Preview Clips -->
+            <div class="video-preview-grid">
                 <div class="video-clip vertical">
                     <video controls playsinline>
                         <source src="assets/videos/clip-v1.mp4" type="video/mp4">
@@ -137,20 +121,9 @@
                 </div>
                 <div class="video-clip vertical">
                     <video controls playsinline>
-                        <source src="assets/videos/clip-v4.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-clip vertical">
-                    <video controls playsinline>
                         <source src="assets/videos/clip-v5.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="video-clip vertical">
-                    <video controls playsinline>
-                        <source src="assets/videos/clip-v6.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <!-- 2 Horizontal clips -->
                 <div class="video-clip horizontal">
                     <video controls playsinline>
                         <source src="assets/videos/clip-h1.mp4" type="video/mp4">
@@ -161,6 +134,9 @@
                         <source src="assets/videos/clip-h2.mp4" type="video/mp4">
                     </video>
                 </div>
+            </div>
+            <div class="gallery-cta">
+                <a href="videos.html" class="btn-gallery">View Full Gallery</a>
             </div>
         </div>
     </section>
@@ -199,8 +175,8 @@
                             <path d="M8 21h8M12 17v4"/>
                         </svg>
                     </div>
-                    <h3>Editing & Post</h3>
-                    <p>CapCut, Photoshop, Lightroom, and Final Cut, plus AI tools like Krea for detail work. Color grading, cropping, and clean delivery.</p>
+                    <h3>Editing & Content</h3>
+                    <p>CapCut, Photoshop, Lightroom, and Final Cut, plus AI tools like Krea for detail work. Comfortable with Instagram, TikTok, and Facebook trends, with experience creating short-form video and posts across all three.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
@@ -274,7 +250,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Devin Gruber. All rights reserved.</p>
+            <p>&copy; 2026 Devin Gruber. All rights reserved.</p>
         </div>
     </footer>
 
