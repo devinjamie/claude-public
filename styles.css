@@ -383,7 +383,7 @@ a { color: inherit; text-decoration: none; }
     .nav-toggle.active span:nth-child(2) { opacity: 0; }
     .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
     .hero-content { padding: 60px 24px; }
-    .hero-logo-img { max-width: 420px; }
+    .hero-logo-img { max-width: 85vw; }
     .hero-tagline { font-size: 1.4rem; }
     .hero-scroll svg { width: 36px; height: 36px; }
     .section { padding: 72px 0; }
@@ -406,7 +406,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 480px) {
-    .hero-logo-img { max-width: 340px; }
+    .hero-logo-img { max-width: 80vw; }
     .hero-tagline { font-size: 1.2rem; letter-spacing: 0.2em; }
     .hero-scroll svg { width: 32px; height: 32px; }
     .photo-preview-grid { columns: 2; }
