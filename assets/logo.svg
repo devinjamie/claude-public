@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60">
   <style>
-    .name-light { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 36px; fill: #ffffff; }
-    .name-bold { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 36px; fill: #ffffff; }
+    .name-light { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 42px; fill: #ffffff; }
+    .name-bold { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 42px; fill: #ffffff; }
   </style>
-  <text x="200" y="45" text-anchor="middle">
+  <text x="160" y="38" text-anchor="middle">
     <tspan class="name-light">devin </tspan><tspan class="name-bold">gruber</tspan>
   </text>
-  <rect x="170" y="58" width="60" height="4" rx="2" fill="#B5CB41"/>
+  <rect x="130" y="48" width="60" height="4" rx="2" fill="#B5CB41"/>
 </svg>
