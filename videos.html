@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery | Devin Gruber</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Devin Gruber</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#photos">Photos</a></li>
+                <li><a href="index.html#video">Video</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="gallery-page-header">
+        <div class="container">
+            <a href="index.html#video" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back
+            </a>
+            <h1 class="section-title">Videography</h1>
+            <p class="section-subtitle">All clips. Shot on iPhone.</p>
+        </div>
+    </section>
+
+    <!-- Full Video Gallery -->
+    <section class="gallery-page-content">
+        <div class="container">
+            <div class="video-grid-full">
+                <!-- Montage -->
+                <div class="video-clip vertical video-clip-montage">
+                    <video controls playsinline>
+                        <source src="assets/videos/montage.mp4" type="video/mp4">
+                    </video>
+                    <span class="video-label">Montage</span>
+                </div>
+                <!-- 8 Vertical clips -->
+                <div class="video-clip vertical">
+                    <video controls playsinline>
+                        <source src="assets/videos/clip-v1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-clip vertical">
+                    <video controls playsinline>
+                        <source src="assets/videos/clip-v2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-clip vertical">
+                    <video controls playsinline>
+                        <source src="assets/videos/clip-v3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-clip vertical">
+                    <video controls playsinline>
+                        <source src="assets/videos/clip-v4.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-clip vertical">
+                    <video controls playsinline>
+                        <source src="assets/videos/clip-v5.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-clip vertical">
+                    <video controls playsinline>
+                        <source src="assets/videos/clip-v6.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-clip vertical">
+                    <video controls playsinline>
+                        <source src="assets/videos/clip-v7.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-clip vertical">
+                    <video controls playsinline>
+                        <source src="assets/videos/clip-v8.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- 4 Horizontal clips -->
+                <div class="video-clip horizontal">
+                    <video controls playsinline>
+                        <source src="assets/videos/clip-h1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-clip horizontal">
+                    <video controls playsinline>
+                        <source src="assets/videos/clip-h2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-clip horizontal">
+                    <video controls playsinline>
+                        <source src="assets/videos/clip-h3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-clip horizontal">
+                    <video controls playsinline>
+                        <source src="assets/videos/clip-h4.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Devin Gruber. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
