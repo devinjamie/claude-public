@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80">
   <style>
-    .name-light { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 36px; fill: #1c1917; }
-    .name-bold { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 36px; fill: #1c1917; }
+    .name-light { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 36px; fill: #ffffff; }
+    .name-bold { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 36px; fill: #ffffff; }
   </style>
   <text x="200" y="45" text-anchor="middle">
     <tspan class="name-light">devin </tspan><tspan class="name-bold">gruber</tspan>
