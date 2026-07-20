@@ -163,26 +163,21 @@ a { color: inherit; text-decoration: none; }
 
 
 /* ===========================
-   PHOTOS — Full Gallery (masonry)
+   PHOTOS — Full Gallery (stable grid)
    =========================== */
 .photo-grid-full {
-    columns: 3;
-    column-gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
 }
 .photo-grid-full .photo-item {
-    break-inside: avoid;
-    margin-bottom: 12px;
     border-radius: var(--radius);
     overflow: hidden;
     cursor: pointer;
 }
 .photo-grid-full .photo-item img {
-    width: 100%; height: auto; display: block;
-    opacity: 0;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
-}
-.photo-grid-full .photo-item img.loaded {
-    opacity: 1;
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .photo-grid-full .photo-item:hover img { transform: scale(1.02); }
 
@@ -383,7 +378,7 @@ a { color: inherit; text-decoration: none; }
    =========================== */
 @media (max-width: 1024px) {
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
-    .photo-grid-full { columns: 2; }
+    .photo-grid-full { grid-template-columns: repeat(2, 1fr); }
     .photo-preview-grid { columns: 2; }
     .video-preview-grid { grid-template-columns: repeat(4, 1fr); }
     .video-grid-full { grid-template-columns: repeat(4, 1fr); }
@@ -419,8 +414,8 @@ a { color: inherit; text-decoration: none; }
     .about-image { max-width: 280px; margin: 0 auto; }
     .photo-preview-grid { columns: 2; column-gap: 8px; }
     .photo-preview-grid .photo-item { margin-bottom: 8px; }
-    .photo-grid-full { columns: 2; column-gap: 8px; }
-    .photo-grid-full .photo-item { margin-bottom: 8px; }
+    .photo-grid-full { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+
     .iphone-frame { width: 300px; border-radius: 44px; padding: 11px; }
     .iphone-screen { border-radius: 35px; }
     .montage-video { border-radius: 35px; }
@@ -437,7 +432,7 @@ a { color: inherit; text-decoration: none; }
     .hero-tagline { font-size: 1.2rem; letter-spacing: 0.2em; }
     .hero-scroll svg { width: 32px; height: 32px; }
     .photo-preview-grid { columns: 2; }
-    .photo-grid-full { columns: 2; }
+    .photo-grid-full { grid-template-columns: repeat(2, 1fr); }
     .iphone-frame { width: 260px; border-radius: 40px; padding: 10px; }
     .iphone-screen { border-radius: 32px; }
     .montage-video { border-radius: 32px; }
