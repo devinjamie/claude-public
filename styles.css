@@ -36,6 +36,7 @@ img, video { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
+
 /* ===========================
    NAVIGATION
    =========================== */
@@ -43,13 +44,16 @@ a { color: inherit; text-decoration: none; }
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
-    background: rgba(250, 250, 249, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     border-bottom: 1px solid transparent;
     transition: var(--transition);
 }
 .nav.scrolled {
+    background: rgba(250, 250, 249, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom-color: var(--color-border);
     box-shadow: var(--shadow-sm);
 }
@@ -82,6 +86,7 @@ a { color: inherit; text-decoration: none; }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
 .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--color-text); border-radius: 2px; transition: var(--transition); }
 
+
 /* ===========================
    HERO
    =========================== */
@@ -113,6 +118,7 @@ a { color: inherit; text-decoration: none; }
 .hero-scroll:hover { color: #B5CB41; filter: brightness(1.2); }
 .hero-scroll svg { animation: float 2s ease-in-out infinite; }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
 
 /* ===========================
    SECTIONS
@@ -147,9 +153,14 @@ a { color: inherit; text-decoration: none; }
 }
 .photo-preview-grid .photo-item img {
     width: 100%; height: auto; display: block;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+.photo-preview-grid .photo-item img.loaded {
+    opacity: 1;
 }
 .photo-preview-grid .photo-item:hover img { transform: scale(1.02); }
+
 
 /* ===========================
    PHOTOS — Full Gallery (masonry)
@@ -167,7 +178,11 @@ a { color: inherit; text-decoration: none; }
 }
 .photo-grid-full .photo-item img {
     width: 100%; height: auto; display: block;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+.photo-grid-full .photo-item img.loaded {
+    opacity: 1;
 }
 .photo-grid-full .photo-item:hover img { transform: scale(1.02); }
 
@@ -198,6 +213,7 @@ a { color: inherit; text-decoration: none; }
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
 }
+
 
 /* ===========================
    VIDEO — iPhone Frame
@@ -236,6 +252,13 @@ a { color: inherit; text-decoration: none; }
 .video-clip.vertical { aspect-ratio: 9/16; }
 .video-clip.horizontal { aspect-ratio: 16/9; grid-column: span 2; }
 .video-clip video { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); }
+.video-clip iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: var(--radius-lg);
+}
+
 
 /* ===========================
    VIDEO — Full Gallery Grid
@@ -248,6 +271,7 @@ a { color: inherit; text-decoration: none; }
 .video-grid-full .video-clip.vertical { aspect-ratio: 9/16; }
 .video-grid-full .video-clip.horizontal { aspect-ratio: 16/9; grid-column: span 2; }
 .video-grid-full .video-clip video { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); }
+.video-grid-full .video-clip iframe { width: 100%; height: 100%; border: none; border-radius: var(--radius-lg); }
 .video-clip-montage { position: relative; }
 .video-label {
     position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
@@ -283,6 +307,7 @@ a { color: inherit; text-decoration: none; }
     color: white;
 }
 .gallery-page-content { padding: 0 0 100px; }
+
 
 /* ===========================
    SKILLS
@@ -323,6 +348,7 @@ a { color: inherit; text-decoration: none; }
    FOOTER
    =========================== */
 .footer { padding: 32px 0; text-align: center; color: var(--color-text-light); font-size: 0.8rem; border-top: 1px solid var(--color-border); }
+
 
 /* ===========================
    LIGHTBOX
@@ -367,6 +393,7 @@ a { color: inherit; text-decoration: none; }
     .montage-video { border-radius: 38px; }
     .iphone-notch { width: 90px; height: 24px; top: 12px; }
 }
+
 
 @media (max-width: 768px) {
     .nav-links {
