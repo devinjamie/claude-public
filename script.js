@@ -2,6 +2,34 @@
    DEVIN GRUBER PORTFOLIO V5
    =========================== */
 
+// ── Force hero video autoplay (iOS fallback) ─────────────────
+(function() {
+    const heroVideo = document.querySelector('.hero-video');
+    if (!heroVideo) return;
+    
+    heroVideo.muted = true;
+    heroVideo.playsInline = true;
+    
+    function tryPlay() {
+        const playPromise = heroVideo.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function() {
+                // Retry on user interaction if autoplay blocked
+                document.addEventListener('touchstart', function once() {
+                    heroVideo.play();
+                    document.removeEventListener('touchstart', once);
+                }, { once: true });
+            });
+        }
+    }
+    
+    if (heroVideo.readyState >= 2) {
+        tryPlay();
+    } else {
+        heroVideo.addEventListener('loadeddata', tryPlay);
+    }
+})();
+
 // ── Nav: scroll state & hero visibility ──────────────────────
 const nav = document.getElementById('nav');
 const hero = document.querySelector('.hero');
