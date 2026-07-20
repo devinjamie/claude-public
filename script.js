@@ -75,7 +75,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ── Fade-in on scroll ─────────────────────────────────────────
 const fadeElements = document.querySelectorAll(
     '.section-title, .section-subtitle, .about-image, .about-text, ' +
-    '.photo-item, .video-clip, .skill-card, .contact-content, .iphone-frame-wrap, .gallery-cta'
+    '.video-clip, .skill-card, .contact-content, .iphone-frame-wrap, .gallery-cta'
 );
 
 const observerOptions = {
