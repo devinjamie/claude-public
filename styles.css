@@ -97,11 +97,12 @@ a { color: inherit; text-decoration: none; }
     background: #1a2a1a;
 }
 .hero-video-wrap { position: absolute; inset: 0; z-index: 0; }
-.hero-video { width: 100%; height: 100%; object-fit: cover; }
-.hero-video::-webkit-media-controls { display: none !important; }
-.hero-video::-webkit-media-controls-start-playback-button { display: none !important; }
+.hero-video { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.hero-video::-webkit-media-controls { display: none !important; opacity: 0 !important; }
+.hero-video::-webkit-media-controls-start-playback-button { display: none !important; opacity: 0 !important; }
+.hero-video::-webkit-media-controls-panel { display: none !important; }
 .hero-overlay {
-    position: absolute; inset: 0;
+    position: absolute; inset: 0; z-index: 1;
     background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.5) 100%);
 }
 .hero-content {

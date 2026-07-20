@@ -7,26 +7,23 @@
     const heroVideo = document.querySelector('.hero-video');
     if (!heroVideo) return;
     
+    // iOS requires these set via JS as well
     heroVideo.muted = true;
-    heroVideo.playsInline = true;
+    heroVideo.setAttribute('playsinline', '');
     
-    function tryPlay() {
-        const playPromise = heroVideo.play();
-        if (playPromise !== undefined) {
-            playPromise.catch(function() {
-                // Retry on user interaction if autoplay blocked
-                document.addEventListener('touchstart', function once() {
-                    heroVideo.play();
-                    document.removeEventListener('touchstart', once);
-                }, { once: true });
-            });
-        }
-    }
-    
-    if (heroVideo.readyState >= 2) {
-        tryPlay();
-    } else {
-        heroVideo.addEventListener('loadeddata', tryPlay);
+    // Try to play immediately
+    var playAttempt = heroVideo.play();
+    if (playAttempt !== undefined) {
+        playAttempt.catch(function() {
+            // If blocked, keep retrying every 500ms until it works
+            var retryInterval = setInterval(function() {
+                heroVideo.play().then(function() {
+                    clearInterval(retryInterval);
+                }).catch(function() {});
+            }, 500);
+            // Give up after 5 seconds and wait for touch
+            setTimeout(function() { clearInterval(retryInterval); }, 5000);
+        });
     }
 })();
 
